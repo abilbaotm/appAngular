@@ -1,1 +1,14 @@
-<p>heroes works!</p>
+<h1>Héroes <small>Marver y DC</small></h1>
+<hr>
+<div class="card-columns">
+
+  <div *ngFor="let heroe of [1,2,3,4,5,6]" class="card text-center">
+    <img src="assets/img/aquaman.png" class="card-img-top img-fluid" alt="Aquaman">
+
+    <div class="card-body">
+      <h5 class="card-title">TITULO</h5>
+      <p class="card-text">TEXTO</p>
+      <p class="card-text"><small class="text-muted">texto small</small> </p>
+    </div>
+  </div>
+</div>
