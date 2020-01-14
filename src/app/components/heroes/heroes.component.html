@@ -2,13 +2,15 @@
 <hr>
 <div class="card-columns">
 
-  <div *ngFor="let heroe of [1,2,3,4,5,6]" class="card text-center">
-    <img src="assets/img/aquaman.png" class="card-img-top img-fluid" alt="Aquaman">
+  <div *ngFor="let heroe of heroes; let i=index" class="card text-center">
+    <img src="{{heroe.img}}" class="card-img-top img-fluid" alt="{{heroe.nombre}}">
 
     <div class="card-body">
-      <h5 class="card-title">TITULO</h5>
-      <p class="card-text">TEXTO</p>
-      <p class="card-text"><small class="text-muted">texto small</small> </p>
-    </div>
+      <h5 class="card-title">{{heroe.nombre}}</h5>
+      <p class="card-text">{{heroe.bio}}</p>
+      <a [routerLink]="['/heroe',i]" type="button" class="btn btn-outline-primary btn-block">
+        Ver más...
+      </a>
+
   </div>
 </div>

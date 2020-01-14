@@ -9,6 +9,8 @@ import { AboutComponent } from './components/about/about.component';
 import {RouterModule} from '@angular/router';
 import {AppRoutes} from './app.routes';
 import { HeroesComponent } from './components/heroes/heroes.component';
+import {HeroesService} from './servicios/heroes.service';
+import { HeroeComponent } from './components/heroe/heroe.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,14 +18,15 @@ import { HeroesComponent } from './components/heroes/heroes.component';
     HomeComponent,
     SearchComponent,
     AboutComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroeComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
     AppRoutes
   ],
-  providers: [],
+  providers: [HeroesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
