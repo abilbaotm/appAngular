@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import listadePostres from 'src/assets/json/postres.json';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'EJ07-appJsonTabla';
+
+  Postres: any = listadePostres;
+
 }
